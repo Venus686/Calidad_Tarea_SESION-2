@@ -25,10 +25,14 @@ public class Empleado {
 		}
 
 		return salarioBase;
-	}// hacer comprobacion encargado vendedor otro, calculo de ventas  >=1500 1100 o return -1 y  luego horas extras >=0 o return -1;
+	}// hacer comprobacion encargado vendedor , calculo de ventas  >=1500 1100 o return -1 y  luego horas extras >=0 o return -1;
 	
 	public float calculoNominaNeta(float nominaBruta) {
 		float retencion;
+		if(nominaBruta < 0) {
+	        return -1;
+	    }
+		
 		if(nominaBruta >2100 && nominaBruta<2500 ) {
 			retencion= (float) 0.15;
 		}else if(nominaBruta>= 2500) {
@@ -37,7 +41,7 @@ public class Empleado {
 			retencion=0;
 		}
 		return nominaBruta*(1-retencion);
-	} // PRUEBAS <2100 2100-2500 >2500 O NEGATIVO
-	//TOTAL 13 TEST
+	} 
+
 	
 }
