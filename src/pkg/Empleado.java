@@ -25,7 +25,7 @@ public class Empleado {
 		}
 
 		return salarioBase;
-	}// hacer comprobacion encargado vendedor , calculo de ventas  >=1500 1100 o return -1 y  luego horas extras >=0 o return -1;
+	}
 	
 	public float calculoNominaNeta(float nominaBruta) {
 		float retencion;
